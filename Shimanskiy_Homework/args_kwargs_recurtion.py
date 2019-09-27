@@ -33,4 +33,4 @@ dict_2 = {'a': 31, 'b': 11, 'k': 'word wide'}
 some_dict = {**dict_1, **dict_2}
 print(some_dict)
 
-print(find_value(kwargs=some_dict))
+print(find_value(**some_dict))
