@@ -12,13 +12,13 @@ def debug(func):
         print(f"{func.__name__!r} returned {value!r}")           # 4
         return value
     return wrapper_debug
-
-@debug
-def make_greeting(name, age=None):
-    if age is None:
-        return f"Howdy {name}!"
-    else:
-        return f"Whoa {name}! {age} already, you are growing up!"
-
-make_greeting("Benjamin")
-make_greeting("Richard", age=112)
+#
+# @debug
+# def make_greeting(name, age=None):
+#     if age is None:
+#         return f"Howdy {name}!"
+#     else:
+#         return f"Whoa {name}! {age} already, you are growing up!"
+#
+# make_greeting("Benjamin")
+# make_greeting("Richard", age=112)
