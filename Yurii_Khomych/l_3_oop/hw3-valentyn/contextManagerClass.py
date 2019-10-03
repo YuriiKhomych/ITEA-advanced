@@ -1,35 +1,12 @@
 import time
-from contextlib import contextmanager
-
-a = 10
-b = 0
-c = 3
 
 
-#
-def suma_b(a, b):
+def div_a_b(a, b):
     return a / b
 
 
-#?????????????????????????????????
-@contextmanager
-def single(c):
-    print( "Starting" )
-    yield()
-    print( "Finishin" )
-
-
-#
-#
-single( c )
-
-
-# Python program creating a
-# context manager
-##
-
-##exceptions
-class ContextManagerException():
+# exception
+class ContextManagerException:
     def __init__(self, exc_type):
         self.exc_type = exc_type
 
@@ -43,10 +20,10 @@ class ContextManagerException():
 
 
 with ContextManagerException( ZeroDivisionError ):
-    suma_b( a, b )
+    div_a_b( 10, 0 )
 
 
-##timer
+# timer
 class timer():
     def __init__(self):
         self.start = time.time()
