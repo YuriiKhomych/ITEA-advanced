@@ -1,6 +1,9 @@
 import random
 PLUGINS = dict()
 
+class Foo:
+    pass
+
 def register(func):
     """Register a function as a plug-in"""
     PLUGINS[func.__name__] = func
@@ -20,3 +23,4 @@ def randomly_greet(name):
     return greeter_func(name)
 
 randomly_greet("YEEAH")
+
