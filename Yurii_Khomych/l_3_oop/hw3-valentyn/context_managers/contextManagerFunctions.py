@@ -1,25 +1,17 @@
 from contextlib import contextmanager
 
 
-
-global C
 C = 3
 
 
-
-
-# ?????????????????????????????????
 @contextmanager
 def single():
-    print( "Starting", C )
+    print("Starting", C)
     yield ()
-    print( "Finishing", C )
+    print("Finishing", C)
 
 
-#
-#
 context = single()
 with context:
     C = 19
-    print( "C = ", C )
-
+    print("C = ", C)
