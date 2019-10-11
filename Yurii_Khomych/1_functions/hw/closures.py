@@ -1,16 +1,9 @@
 b1 = 6
 
 
-# def f1(a1):
-#    print(a1)
-#    print(b1)
-#
-# f1(3)
-#
-
 def f11(a):
-    print( a )
-    print( b1 )
+    print(a)
+    print(b1)
 
     def f2():
         c = a + b1
@@ -19,20 +12,20 @@ def f11(a):
     return f2()
 
 
-print( f11( 3 ) )
+print(f11(3))
 
 a = 5
 
 
 def function():
     global a
-    print( a )
+    print(a)
     a = 10
-    print( a )
+    print(a)
 
 
 function()
-print( a )
+print(a)
 
 
 def f1():
@@ -45,5 +38,6 @@ def f1():
         return a
 
     return f2()
+
 
 print(f1())

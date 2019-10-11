@@ -1,36 +1,38 @@
 import random
 
-#### ***** buble Sorting
-def bubble_sort(listt):
-    for i, num in enumerate( listt ):
+
+# ***** bubble Sorting
+def bubble_sort(list_t):
+    for pos, num in enumerate(list_t):
         try:
-            if listt[i + 1] < num:
-                listt[i] = listt[i + 1]
-                listt[i + 1] = num
-                bubble_sort( listt )
+            if list_t[pos + 1] < num:
+                list_t[pos] = list_t[pos + 1]
+                list_t[pos + 1] = num
+                bubble_sort(list_t)
         except IndexError:
             pass
-    return listt
+    return list_t
 
 
-sortList = [random.randint( -10, 100 ) for x in range( 10 )]
+sortList = [random.randint(-10, 100) for x in range(10)]
 
-print( "array:" )
-for i in range( 0, len( sortList ) ):
-    print( sortList[i], end=' ' )
+print("array:")
+for i in range(0, len(sortList)):
+    print(sortList[i], end=' ')
 
-bubble_sort( sortList )
+bubble_sort(sortList)
 
-print( "\nSorted array:" )
-for i in range( 0, len( sortList ) ):
-    print( sortList[i], end=' ' )
+print("\nSorted array:")
+for i in range(0, len(sortList)):
+    print(sortList[i], end=' ')
 
-#### ****** FACTORIAL
-def factorial(numberF):
-    if numberF != 1:
-        return numberF * factorial( numberF - 1 )
+
+# ****** FACTORIAL
+def factorial(number_f):
+    if number_f != 1:
+        return number_f * factorial(number_f - 1)
     else:
-        return numberF
+        return number_f
 
 
-print( '\nFactorial: ', factorial( 9 ) )
+print('\nFactorial: ', factorial(9))

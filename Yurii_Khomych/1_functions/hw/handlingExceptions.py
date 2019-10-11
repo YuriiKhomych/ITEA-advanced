@@ -1,5 +1,4 @@
-
-x="XX"
+x = "XX"
 try:
     print(x+"x")
 except TypeError as t:
