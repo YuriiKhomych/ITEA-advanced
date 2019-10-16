@@ -52,8 +52,8 @@ class Account:
         print(owner, amount)
         self.__dict__[owner] = amount
 
-    def __getattr__(self, key):
-        return self.__dict__[key]
+    def __getattr__(self, owner):
+        return self.__dict__[owner]
 
     def __abs__(self):
         return abs(self.amount)
