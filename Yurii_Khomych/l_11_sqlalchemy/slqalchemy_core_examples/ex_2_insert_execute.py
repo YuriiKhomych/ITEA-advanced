@@ -12,15 +12,15 @@ ins.compile().params
 
 conn = engine.connect()
 
-result = conn.execute(ins)
+# result = conn.execute(ins)
 # INSERT INTO users (name, fullname) VALUES (?, ?)
 # ('jack', 'Jack Jones')
 # COMMIT
-ins.bind = engine
-str(ins)
-result.inserted_primary_key
+# ins.bind = engine
+# str(ins)
+# result.inserted_primary_key
 
-conn.execute(ins, id=2, name='wendy', fullname='Wendy Williams')
+# conn.execute(ins, id=2, name='wendy', fullname='Wendy Williams')
 
 conn.execute(addresses.insert(), [
    {'user_id': 1, 'email_address': 'jack@yahoo.com'},

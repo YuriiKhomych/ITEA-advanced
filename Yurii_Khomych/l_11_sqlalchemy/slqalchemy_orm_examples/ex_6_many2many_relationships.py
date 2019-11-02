@@ -27,9 +27,9 @@ class BlogPost(Base):
     author = relationship("User", back_populates="posts")
 
     def __init__(self, headline, body, author):
-        self.author = author
         self.headline = headline
         self.body = body
+        self.author = author
 
     def __repr__(self):
         return "BlogPost(%r, %r, %r)" % (self.headline, self.body, self.author)

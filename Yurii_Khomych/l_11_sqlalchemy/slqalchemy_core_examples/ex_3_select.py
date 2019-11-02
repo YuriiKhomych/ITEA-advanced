@@ -1,5 +1,4 @@
-from sqlalchemy import select, or_, text, func, desc, bindparam
-from sqlalchemy.sql.elements import and_, not_
+from sqlalchemy import select, or_, text, func, desc, bindparam, and_, not_
 
 from ex_1_define_and_create_tables_core import (
     users,
@@ -71,7 +70,7 @@ print(
             (addresses.c.email_address == 'wendy@aol.com') | \
             (addresses.c.email_address == 'jack@yahoo.com')
     ) \
-    & (users.c.id>5)
+    & ~(users.c.id>5)
 )
 
 s = select(
@@ -81,7 +80,7 @@ s = select(
     where(
     and_(
         users.c.id == addresses.c.user_id,
-        users.c.name.between('m', 'z'),
+        users.c.name.between('e', 'z'),
         or_(
             addresses.c.email_address.like('%@aol.com'),
             addresses.c.email_address.like('%@msn.com')
@@ -203,8 +202,7 @@ stmt = select([users.c.name]).\
 conn.execute(stmt).fetchall()
 
 # Insert update delete
-stmt = users.update().\
-            values(fullname="Fullname: " + users.c.name)
+stmt = users.update().values(fullname="Fullname: " + users.c.name)
 # UPDATE users SET fullname=(? || users.name)
 # ('Fullname: ',)
 # COMMIT
@@ -226,7 +224,7 @@ conn.execute(stmt)
 # ('ed', 'jack')
 # COMMIT
 
-result = conn.execute(addresses.delete())
+result = conn.execute(users.delete().where(users.c.name == 'jack'))
 result.rowcount
 
 

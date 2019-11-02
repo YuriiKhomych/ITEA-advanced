@@ -15,7 +15,7 @@ engine = create_engine(db_url, echo=True)
 
 session = sessionmaker()
 session.configure(bind=engine)
-Base.metadata.bind = engine
+# Base.metadata.bind = engine
 s = session()
 IT = Department(name='IT')
 Financial = Department(name='Financial')

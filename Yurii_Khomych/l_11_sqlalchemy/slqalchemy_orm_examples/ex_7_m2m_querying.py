@@ -9,7 +9,9 @@ session = Session()
 wendy = session.query(User).\
                 filter_by(name='wendy').\
                 one()
-post = BlogPost("Wendy's Blog Post", "This is a test", wendy)
+post = BlogPost(
+    headline="Wendy's Blog Post", body="This is a test", author=wendy
+)
 session.add(post)
 
 post.keywords.append(Keyword('wendy'))
@@ -27,3 +29,4 @@ session.query(BlogPost).\
 wendy.posts.\
         filter(BlogPost.keywords.any(keyword='firstpost')).\
         all()
+session.commit()

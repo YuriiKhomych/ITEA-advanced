@@ -1,8 +1,8 @@
 """add department_employee_link
 
-Revision ID: 17c3e8853614
-Revises: e155eded06ed
-Create Date: 2019-10-27 15:34:44.124620
+Revision ID: 7de67e2eded5
+Revises: 38b0b83a83b1
+Create Date: 2019-11-02 11:31:28.302373
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '17c3e8853614'
-down_revision = 'e155eded06ed'
+revision = '7de67e2eded5'
+down_revision = '38b0b83a83b1'
 branch_labels = None
 depends_on = None
 
