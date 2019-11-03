@@ -11,7 +11,7 @@ class Country:
         self.cities = []
 
     # create list with City names
-    def __add__(self, *cities):
+    def append(self, *cities):
         if cities not in cities:
             self.cities.extend(cities)
         return self.cities
@@ -37,7 +37,7 @@ class Country:
 
         elif self.continent in ['Europe']:
             oceans_eu = copy.deepcopy(oceans)
-            oceans_eu['ocean'][0]='Atlantic'
+            oceans_eu['ocean'][0] = 'Atlantic'
             oceans_eu['ocean'].pop(2)
             print(oceans_eu)
             if oceans != oceans_eu:
@@ -63,14 +63,14 @@ class City(Country):
 a = Country('Spain', 505990, 'Europe')
 a.which_ocean()
 b = City('Spain')
-b.__add__('Barcelona', 'Madrid', 'Malaga', 'Valencia')
+b.append('Barcelona', 'Madrid', 'Malaga', 'Valencia')
 print(b.city_population_add(1615000, 3174000, 569005, 789004))
 print(b.show_info())
 
 a = Country('USA', 9834000, 'North America')
 a.which_ocean()
 b = City('USA')
-b.__add__('El Paso', 'Orlando', 'LA')
+b.append('El Paso', 'Orlando', 'LA')
 print(b.city_population_add(683577, 280257, 4000000))
 print(b.show_info())
 print(City.mro())
