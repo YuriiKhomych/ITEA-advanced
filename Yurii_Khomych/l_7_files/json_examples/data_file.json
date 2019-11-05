@@ -1,6 +1,7 @@
 {
     "president": {
         "name": "Zaphod Beeblebrox",
-        "species": "Betelgeusian"
+        "species": "Betelgeusian",
+        "date": "2019-08-07"
     }
 }
