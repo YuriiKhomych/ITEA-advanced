@@ -3,12 +3,11 @@ from bs4 import BeautifulSoup
 from funcs import simple_get
 
 
-def get_names():
+def get_names(url):
     """
     Downloads the page where the list of mathematicians is found
     and returns a list of strings, one per mathematician
     """
-    url = 'http://www.fabpedigree.com/james/mathmen.htm'
     response = simple_get(url)
 
     if response is not None:
@@ -25,4 +24,8 @@ def get_names():
 
 
 if __name__ == '__main__':
-    get_names()
+    url = 'http://www.fabpedigree.com/james/mathmen.htm'
+    result = get_names(url=url)
+    with open("names.txt", "a") as file:
+        file.writelines(result)
+

@@ -1,6 +1,6 @@
 from xml.etree import ElementTree as ET
 
-tree = ET.parse('data/test.xml')
+tree = ET.parse('data/test_ns.xml')
 root = tree.getroot()
 
 # search value
