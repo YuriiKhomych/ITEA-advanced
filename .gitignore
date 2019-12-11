@@ -126,6 +126,6 @@ dmypy.json
 
 # Pycharm
 .idea/
-.DC_Store
+*.DC_Store
 /blog_flask_example/app/migrations/versions/*
 /blog_flask_example/app/templates/temp
