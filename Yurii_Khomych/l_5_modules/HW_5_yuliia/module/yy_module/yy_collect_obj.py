@@ -1,0 +1,1 @@
+user_roles = ['admin', 'user', 'super user', 'guest']
