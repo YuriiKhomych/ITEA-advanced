@@ -127,3 +127,6 @@ dmypy.json
 .idea/
 
 *.DC_Store
+*/hw-valentyn/result/*
+/Yurii_Khomych/l_7_files/hw-valentyn/reading_csv/result/
+*/hw-valentyn/reading_json/result.csv

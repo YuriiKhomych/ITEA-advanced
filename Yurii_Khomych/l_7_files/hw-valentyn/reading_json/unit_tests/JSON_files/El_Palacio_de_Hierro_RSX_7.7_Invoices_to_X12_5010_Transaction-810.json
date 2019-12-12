@@ -1,0 +1,454 @@
+{
+    "hasEnum": false,
+    "validation": [],
+    "name": "Transaction-810",
+    "minOccurs": "1",
+    "children": [
+        {
+            "hasEnum": false,
+            "validation": [],
+            "name": "Segment-BIG",
+            "minOccurs": "1",
+            "children": [
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG01",
+                    "minOccurs": "1",
+                    "children": [],
+                    "visible": true,
+                    "sourcing": {
+                        "hasEnum": false,
+                        "name": "InvoiceDate",
+                        "location": "Invoice/Header/InvoiceHeader/InvoiceDate"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Date expressed as CCYYMMDD where CC represents the first two digits of the calendar year ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 4
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "Date",
+                            "minOccurs": "1",
+                            "format": "CCyyMMdd",
+                            "minLength": "8",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "373",
+                            "EDIDataType": "DT",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "8",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 5
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 3
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG02",
+                    "minOccurs": "1",
+                    "children": [],
+                    "visible": true,
+                    "sourcing": {
+                        "hasEnum": false,
+                        "name": "InvoiceNumber",
+                        "location": "Invoice/Header/InvoiceHeader/InvoiceNumber"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Identifying number assigned by issuer ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 7
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "String",
+                            "minOccurs": "1",
+                            "minLength": "1",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "76",
+                            "EDIDataType": "AN",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "22",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 8
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 6
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG03",
+                    "minOccurs": "0",
+                    "children": [],
+                    "visible": true,
+                    "sourcing": {
+                        "hasEnum": false,
+                        "name": "PurchaseOrderDate",
+                        "location": "Invoice/Header/InvoiceHeader/PurchaseOrderDate"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Date expressed as CCYYMMDD where CC represents the first two digits of the calendar year ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 10
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "Date",
+                            "minOccurs": "1",
+                            "format": "CCyyMMdd",
+                            "minLength": "8",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "373",
+                            "EDIDataType": "DT",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "8",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 11
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 9
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG04",
+                    "minOccurs": "1",
+                    "children": [],
+                    "visible": true,
+                    "sourcing": {
+                        "hasEnum": false,
+                        "name": "PurchaseOrderNumber",
+                        "location": "Invoice/Header/InvoiceHeader/PurchaseOrderNumber"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Identifying number for Purchase Order assigned by the orderer/purchaser ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 13
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "String",
+                            "minOccurs": "1",
+                            "minLength": "1",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "324",
+                            "EDIDataType": "AN",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "22",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 14
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 12
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG05",
+                    "minOccurs": "0",
+                    "children": [],
+                    "visible": false,
+                    "sourcing": {
+                        "hasEnum": false,
+                        "name": "ReleaseNumber",
+                        "location": "Invoice/Header/InvoiceHeader/ReleaseNumber"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Number identifying a release against a Purchase Order previously placed by the parties involved in the transaction ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 16
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "String",
+                            "minOccurs": "1",
+                            "minLength": "1",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "328",
+                            "EDIDataType": "AN",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "30",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 17
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 15
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG06",
+                    "minOccurs": "0",
+                    "children": [],
+                    "visible": false,
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Number assigned by the orderer identifying a specific change or revision to a previously transmitted transaction set ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 19
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "String",
+                            "minOccurs": "1",
+                            "minLength": "1",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "327",
+                            "EDIDataType": "AN",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "8",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 20
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 18
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG07",
+                    "minOccurs": "0",
+                    "children": [],
+                    "visible": false,
+                    "sourcing": {
+                        "hasEnum": true,
+                        "name": "InvoiceTypeCode",
+                        "location": "Invoice/Header/InvoiceHeader/InvoiceTypeCode"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Code specifying the type of transaction ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 22
+                        },
+                        {
+                            "hasEnum": true,
+                            "validation": [],
+                            "displayName": "StringSet",
+                            "minOccurs": "1",
+                            "minLength": "2",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "640",
+                            "EDIDataType": "ID",
+                            "failExtraRecords": false,
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "2",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "dropExtraRecords": false,
+                            "id": 23
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 21
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG08",
+                    "minOccurs": "0",
+                    "children": [],
+                    "visible": false,
+                    "sourcing": {
+                        "hasEnum": true,
+                        "name": "TsetPurposeCode",
+                        "location": "Invoice/Header/InvoiceHeader/TsetPurposeCode"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Code identifying purpose of transaction set ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 25
+                        },
+                        {
+                            "hasEnum": true,
+                            "validation": [],
+                            "displayName": "StringSet",
+                            "minOccurs": "1",
+                            "minLength": "2",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "353",
+                            "EDIDataType": "ID",
+                            "failExtraRecords": false,
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "2",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "dropExtraRecords": false,
+                            "id": 26
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 24
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG09",
+                    "minOccurs": "0",
+                    "children": [],
+                    "visible": false,
+                    "sourcing": {
+                        "hasEnum": true,
+                        "name": "ActionCode",
+                        "location": "Invoice/Header/InvoiceHeader/ActionCode"
+                    },
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Code indicating type of action ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 28
+                        },
+                        {
+                            "hasEnum": true,
+                            "validation": [],
+                            "displayName": "StringSet",
+                            "minOccurs": "1",
+                            "minLength": "1",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "306",
+                            "EDIDataType": "ID",
+                            "failExtraRecords": false,
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "2",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "dropExtraRecords": false,
+                            "id": 29
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 27
+                },
+                {
+                    "hasEnum": false,
+                    "validation": [],
+                    "name": "BIG10",
+                    "minOccurs": "0",
+                    "children": [],
+                    "visible": false,
+                    "attributes": [
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "minOccurs": "1",
+                            "text": "Identifying number assigned by issuer ",
+                            "children": [],
+                            "visible": true,
+                            "attributes": [],
+                            "elementType": "documentation",
+                            "id": 31
+                        },
+                        {
+                            "hasEnum": false,
+                            "validation": [],
+                            "displayName": "String",
+                            "minOccurs": "1",
+                            "minLength": "1",
+                            "children": [],
+                            "visible": true,
+                            "ediId": "76",
+                            "EDIDataType": "AN",
+                            "base": "EDI-Element-String-Type",
+                            "maxLength": "22",
+                            "attributes": [],
+                            "elementType": "restriction",
+                            "id": 32
+                        }
+                    ],
+                    "elementType": "element",
+                    "id": 30
+                }
+            ]
+        }
+    ]
+}
