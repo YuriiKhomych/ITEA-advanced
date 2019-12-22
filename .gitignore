@@ -26,6 +26,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*/venv/*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -125,8 +126,9 @@ dmypy.json
 
 # Pycharm
 .idea/
-
 *.DC_Store
 */hw-valentyn/result/*
 /Yurii_Khomych/l_7_files/hw-valentyn/reading_csv/result/
 */hw-valentyn/reading_json/result.csv
+/blog_flask_example/app/migrations/versions/*
+/blog_flask_example/app/templates/temp
